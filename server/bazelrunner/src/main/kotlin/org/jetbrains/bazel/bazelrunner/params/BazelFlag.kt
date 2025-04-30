@@ -56,6 +56,8 @@ object BazelFlag {
 
   @JvmStatic fun testFilter(filterExpression: String): String = arg("test_filter", filterExpression)
 
+  @JvmStatic fun testShardingStrategyDisabled() = arg("test_sharding_strategy", "disabled")
+
   @JvmStatic fun toolTag(): String = arg("tool_tag", "$NAME:$VERSION")
 
   @JvmStatic fun starlarkDebug(): String = flag("experimental_skylark_debug")

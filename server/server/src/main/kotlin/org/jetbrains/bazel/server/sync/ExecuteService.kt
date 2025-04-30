@@ -186,6 +186,9 @@ class ExecuteService(
     params.testFilter?.let { testFilter ->
       command.options.add(BazelFlag.testFilter(testFilter))
     }
+    if (params.debug != null) {
+      command.options.add(BazelFlag.testShardingStrategyDisabled())
+    }
 
     params.environmentVariables?.let { (command as HasEnvironment).environment.putAll(it) }
     params.arguments?.let { (command as HasProgramArguments).programArguments.addAll(it) }
