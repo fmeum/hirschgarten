@@ -65,6 +65,8 @@ java_import(
         "plugins/java-i18n/lib/*.jar",
         "plugins/junit/lib/*.jar",
         "plugins/properties/lib/*.jar",
+        # The Shell Script plugin, injected into genrule commands.
+        "plugins/sh/lib/*.jar",
     ]),
 )
 

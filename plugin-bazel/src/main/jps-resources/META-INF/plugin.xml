@@ -335,6 +335,10 @@
                 implementationClass="org.jetbrains.bazel.languages.starlark.findusages.StarlarkFindUsagesProvider"/>
         <lang.foldingBuilder language="Starlark"
                              implementationClass="org.jetbrains.bazel.languages.starlark.folding.StarlarkFoldingBuilder"/>
+        <lang.elementManipulator
+                forClass="org.jetbrains.bazel.languages.starlark.psi.expressions.StarlarkStringLiteralExpression"
+                implementationClass="org.jetbrains.bazel.languages.starlark.injection.StarlarkStringLiteralManipulator"/>
+        <multiHostInjector implementation="org.jetbrains.bazel.languages.starlark.injection.GenruleCommandShellInjector"/>
         <lineIndentProvider
                 implementation="org.jetbrains.bazel.languages.starlark.indentation.StarlarkLineIndentProvider"/>
         <colorSettingsPage
